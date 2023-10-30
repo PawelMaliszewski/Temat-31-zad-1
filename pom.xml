@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.temt31zad1</groupId>
-    <artifactId>temt31zad1</artifactId>
+    <artifactId>temat31zad1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Temt31zad1</name>
     <description>Temt31zad1</description>

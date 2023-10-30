@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pogoda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="body">
+<div class="container">
+    <div class="col-md-6">
+        <form th:action="@{/weather}" method="get">
+            <label for="city" class="form-label mt-3">Wpisz nazwę miasta</label>
+            <div class="container">
+                <p th:if="${city != null}" style="color: red">Nie odnaleziono miasta o nazwie <span th:text="${city}"/></p>
+            </div>
+            <input type="text" class="form-control" name="city" id="city" placeholder="nazwa miasta" required>
+            <button type="submit" class="btn btn-success mt-2">Szukaj</button>
+        </form>
+    </div>
+    <div class="container" th:if="${weather}">
+        <p><b>Miasto:</b> <span th:text="${weather.getCityName()}"/>
+            , <b>Temperatura:</b> <span th:text="${weather.getTemperature()}"/>&#8451;
+            , <b>Ciśnienie:</b> <span th:text="${weather.getPressure()}"/>hPa
+            , <b>Wilgotność powietrza:</b> <span th:text="${weather.getHumidity()}"/>&#8453;
+            , <b>Prędkość wiatru:</b> <span th:text="${weather.getWindSpeed()}"/>km/h
+            , <b>Wschód słońca:</b> <span th:text="${weather.getSunRise()}"/>
+            , <b>Zachód słońca:</b> <span th:text="${weather.getSunSet()}"/></p>
+    </div>
+</div>
+</body>
+</html>
