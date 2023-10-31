@@ -1,4 +1,4 @@
-package com.temt31zad1.WeatherApi;
+package com.temt31zad1.weatherapi;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

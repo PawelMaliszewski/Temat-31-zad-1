@@ -18,7 +18,7 @@
             <button type="submit" class="btn btn-success mt-2">Szukaj</button>
         </form>
     </div>
-    <div class="container" th:if="${weather}">
+    <div class="container mt-3" th:if="${weather}">
         <p><b>Miasto:</b> <span th:text="${weather.getCityName()}"/>
             , <b>Temperatura:</b> <span th:text="${weather.getTemperature()}"/>&#8451;
             , <b>Ciśnienie:</b> <span th:text="${weather.getPressure()}"/>hPa

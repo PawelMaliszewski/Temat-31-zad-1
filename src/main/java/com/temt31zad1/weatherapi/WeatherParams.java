@@ -1,5 +1,6 @@
-package com.temt31zad1.WeatherApi;
+package com.temt31zad1.weatherapi;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +14,8 @@ class WeatherParams {
     private double temp_max;
     private int pressure;
     private int humidity;
-    private int sea_level;
-    private int grnd_level;
+    @JsonProperty("sea_level")
+    private int seaLevel;
+    @JsonProperty("grnd_level")
+    private int groundLevel;
 }
