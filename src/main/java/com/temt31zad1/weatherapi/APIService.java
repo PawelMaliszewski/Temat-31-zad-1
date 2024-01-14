@@ -14,7 +14,7 @@ public class APIService {
 
     private WeatherApiData findCity(String cityName) {
         RestTemplate restTemplate = new RestTemplate();
-        String key = "647cc0ca9f1f84f81d8cd55767ff285c";
+        String key = "-----";
         String url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + ",pl&APPID=" + key + "&units=metric";
         WeatherApiData weatherApiData = null;
         try {
